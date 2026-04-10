@@ -1,37 +1,83 @@
-# SW Experts
+# Experts Agents
 
-A comprehensive knowledge base of software engineering principles organized into expert panels, designed for use with Claude Code.
+A comprehensive knowledge base of software engineering principles organized into expert panels, designed as agent skills for Claude Code.
 
-## Panels
+## What is this?
 
-| Panel | Topics | Subcategories |
-|-------|--------|---------------|
-| **Software Architect** | 66 | architecture-and-design-patterns, system-design, database, cloud-and-infrastructure, security, code-quality, devops, engineering-management, data-engineering, frontend-and-mobile, ai-and-emerging |
-| **Python Expert** | 20 | language-fundamentals, patterns-and-architecture, testing-and-quality, ecosystem-and-tools |
-| **TypeScript Expert** | 20 | language-fundamentals, patterns-and-architecture, testing-and-quality, ecosystem-and-tools |
-| **UX/UI Expert** | 37 | foundational-principles, ux-laws, visual-design, design-systems, accessibility, information-architecture, usability-research, responsive-mobile, modern-web-patterns, content-strategy, emotional-design-ethics, ux-strategy |
+This repository contains **143 expert files** distilled from authoritative sources on software engineering. Each file covers a specific topic (~200-300 lines) with principles, patterns, code examples, trade-offs, and common mistakes.
 
-**Total: 143 expert files**
+The knowledge is structured as **four expert panels** that Claude Code can consult via slash commands, providing grounded, opinionated guidance on architectural decisions, language best practices, and design choices.
 
-## Structure
+## Expert Panels
 
-```
-experts/           # Individual expert files (~200-300 lines each)
-  architect/       # 66 files across 11 subcategories
-  python/          # 20 files across 4 subcategories
-  typescript/      # 20 files across 4 subcategories
-  ux-ui/           # 37 files across 12 subcategories
-synthesis/         # Summary files + decision matrix
-.claude/skills/    # Claude Code skill definitions
-```
+| Panel | Files | Subcategories |
+|-------|-------|---------------|
+| **Software Architect** | 66 | architecture & design patterns, system design, database, cloud & infrastructure, security, code quality, DevOps, engineering management, data engineering, frontend & mobile, AI & emerging |
+| **Python Expert** | 20 | language fundamentals, patterns & architecture, testing & quality, ecosystem & tools |
+| **TypeScript Expert** | 20 | language fundamentals, patterns & architecture, testing & quality, ecosystem & tools |
+| **UX/UI Expert** | 37 | foundational principles, UX laws, visual design, design systems, accessibility, information architecture, usability research, responsive & mobile, modern web patterns, content strategy, emotional design & ethics, UX strategy |
 
 ## Usage with Claude Code
 
-Use the skills from any project:
-- `/software-architect` — architectural decisions, patterns, system design
-- `/python-expert` — Python best practices, patterns, ecosystem
-- `/typescript-expert` — TypeScript best practices, patterns, ecosystem
-- `/ux-ui-expert` — user experience, visual design, accessibility
+### As skills (slash commands)
+
+From any project, invoke the expert panels directly:
+
+```
+/software-architect    # Architecture, patterns, system design, databases, cloud, security, DevOps
+/python-expert         # Python best practices, frameworks, testing, tooling
+/typescript-expert     # TypeScript type system, React, Node.js, testing, build tools
+/ux-ui-expert          # UX strategy, visual design, accessibility, design systems
+```
+
+### Quick reference
+
+- **Synthesis files** (`synthesis/`) — High-level overviews of each panel's topics
+- **Decision matrix** (`synthesis/decision-matrix.md`) — Cross-panel comparison tables for common trade-offs (monolith vs microservices, database selection, API styles, etc.)
+- **Expert files** (`experts/`) — Deep dives on individual topics with patterns, code, and anti-patterns
+
+## Repository Structure
+
+```
+experts/                    # Individual expert files
+  architect/                # 66 files across 11 subcategories
+    architecture-and-design-patterns/
+    system-design/
+    database/
+    cloud-and-infrastructure/
+    security/
+    code-quality/
+    devops/
+    engineering-management/
+    data-engineering/
+    frontend-and-mobile/
+    ai-and-emerging/
+  python/                   # 20 files across 4 subcategories
+    language-fundamentals/
+    patterns-and-architecture/
+    testing-and-quality/
+    ecosystem-and-tools/
+  typescript/               # 20 files across 4 subcategories
+    language-fundamentals/
+    patterns-and-architecture/
+    testing-and-quality/
+    ecosystem-and-tools/
+  ux-ui/                    # 37 files across 12 subcategories
+    foundational-principles/
+    ux-laws/
+    visual-design/
+    design-systems/
+    accessibility/
+    information-architecture/
+    usability-research/
+    responsive-mobile/
+    modern-web-patterns/
+    content-strategy/
+    emotional-design-ethics/
+    ux-strategy/
+synthesis/                  # Panel summaries + decision matrix
+.claude/skills/             # Claude Code skill definitions
+```
 
 ## License
 
